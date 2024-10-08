@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -42,5 +43,15 @@ public class GameController : MonoBehaviour
         {
             plateDialog2.SetActive(false);
         } 
+    }
+
+    public void LoadScene(string lvlName)
+    {
+        SceneManager.LoadScene(lvlName);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
     }
 }
